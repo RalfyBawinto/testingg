@@ -2,7 +2,7 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
   e.preventDefault();
 
   const formData = new FormData(this);
-  const url = "http://ralfyportofolio.byethost14.com/api/config.php"; // url  Backend
+  const url = "http://ralfyportofolio.byethost14.com/api/contact.php"; // url  Backend
 
   fetch(url, {
     method: "POST",
