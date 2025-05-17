@@ -191,7 +191,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }, 100);
 
   // === LOAD ARTICLES DARI PHP (DINAMIS) ===
-  fetch("http://ralfy-personal-homepage.infinityfreeapp.com/articles.php")
+  fetch("https://coba-dulu.infinityfreeapp.com/articles.php")
     .then((response) => {
       if (!response.ok) throw new Error("Gagal memuat");
       return response.text();
