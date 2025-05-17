@@ -208,6 +208,22 @@ document.addEventListener("DOMContentLoaded", () => {
       if (container) {
         container.innerHTML = `
         <article>
+          <h3>Universitas Sam Ratulangi</h3>
+          <img src="assets/img/articles/unsrat.jpg" alt="Universitas Sam Ratulangi"/>
+          <p>
+            Universitas Sam Ratulangi (Unsrat) adalah salah satu perguruan tinggi terbaik di Indonesia Timur.<br />
+            <a href="https://www.unsrat.ac.id/profil-unversitas/" target="_blank">Baca selengkapnya</a>
+          </p>
+        </article>
+        <article>
+          <h3>Kecerdasan Buatan (AI)</h3>
+          <img src="assets/img/articles/ai.png" alt="Artificial Intelligence"/>
+          <p>
+            AI semakin banyak digunakan dalam berbagai aspek kehidupan, mulai dari asisten virtual hingga kendaraan otonom. <br />
+            <a href="https://portalpublikasi.id/2023/05/13/perkembangan-teknologi-kecerdasan-buatan-artificial-intelligence-atau-ai/" target="_blank">Baca selengkapnya</a>
+          </p>
+        </article>
+        <article>
           <h3>Cyber Security</h3>
           <img src="assets/img/articles/cyber-security.jpeg" alt="Cyber Security" />
           <p>
