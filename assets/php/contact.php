@@ -1,5 +1,5 @@
 <?php
-include 'config.php'; // file ini disimpan hanya di hosting
+include '../php/config.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $name = htmlspecialchars($_POST["name"]);
