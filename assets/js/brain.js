@@ -209,7 +209,7 @@ document.addEventListener("DOMContentLoaded", () => {
         container.innerHTML = `
         <article>
           <h3>Cyber Security</h3>
-          <img src="assets/img/articles/cyber%20security.jpeg" alt="Cyber Security" />
+          <img src="assets/img/articles/cyber-security.jpeg" alt="Cyber Security" />
           <p>
             Cyber security melindungi sistem, jaringan, dan data dari berbagai ancaman digital.<br />
             <a href="https://www.coursera.org/articles/what-is-cyber-security" target="_blank">Baca selengkapnya</a>
