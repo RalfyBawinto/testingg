@@ -191,13 +191,47 @@ document.addEventListener("DOMContentLoaded", () => {
   }, 100);
 
   // === LOAD ARTICLES DARI PHP (DINAMIS) ===
-  fetch("assets/php/articles.php")
-    .then((response) => response.text())
+  fetch("http://ralfy-personal-homepage.infinityfreeapp.com/articles.php")
+    .then((response) => {
+      if (!response.ok) throw new Error("Gagal memuat");
+      return response.text();
+    })
     .then((data) => {
       const container = document.getElementById("dynamic-articles");
       if (container) {
         container.innerHTML = data;
       }
     })
-    .catch((error) => console.error("Gagal memuat artikel dinamis:", error));
+    .catch((error) => {
+      console.warn("Gagal memuat artikel dinamis, tampilkan versi statis.");
+      const container = document.getElementById("dynamic-articles");
+      if (container) {
+        container.innerHTML = `
+        <article>
+          <h3>Cyber Security</h3>
+          <img src="assets/img/articles/cyber%20security.jpeg" alt="Cyber Security" />
+          <p>
+            Cyber security melindungi sistem, jaringan, dan data dari berbagai ancaman digital.<br />
+            <a href="https://www.coursera.org/articles/what-is-cyber-security" target="_blank">Baca selengkapnya</a>
+          </p>
+        </article>
+        <article>
+          <h3>Blockchain</h3>
+          <img src="assets/img/articles/blockchain.jpg" alt="Blockchain" />
+          <p>
+            Blockchain adalah teknologi revolusioner yang digunakan dalam cryptocurrency dan berbagai aplikasi lainnya.<br />
+            <a href="https://aws.amazon.com/id/blockchain/" target="_blank">Baca selengkapnya</a>
+          </p>
+        </article>
+        <article>
+          <h3>E-sport</h3>
+          <img src="assets/img/articles/e-sport.jpg" alt="E-sport" />
+          <p>
+            E-sport adalah kompetisi permainan video yang berkembang pesat dan menjadi industri besar dengan basis penggemar global.<br />
+            <a href="https://blog.maukuliah.id/pengertian-e-sport/" target="_blank">Baca selengkapnya</a>
+          </p>
+        </article>
+      `;
+      }
+    });
 });
